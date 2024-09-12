@@ -1,47 +1,26 @@
 <script>
 
 import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
 
 export default {
-  data() {
-    return {
-      count: 0
-
-    }
-  },
   components: {
-    AppHeader
-  },
-  methods: {
-    incrementCount() {
-      this.count++;
-    }
-  } 
+    AppHeader,
+    AppMain
+  }
 }
 </script>
 
 <template>
   <div>
     <AppHeader/>
-    <main>
-      <button @click="incrementCount()">
-        {{ count }}
-      </button>
-    </main>
+    
+    <AppMain/>
+
   </div>
 </template>
 
-<style scoped>
-
-main {
-  text-align: center;
-}
-
-main button {
-  padding: 14px;
-  background-color: lightcoral;
-  border: none;
-  border-radius: 14px;
-}
-
+<style lang="scss">
+@use 'assets/scss/main' as *;
+@import "bootstrap/scss/bootstrap";
 </style>
